@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="input_address_field_label">Input TON wallet address</string>
+</resources>

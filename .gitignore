@@ -1,0 +1,15 @@
+.gradle
+.settings
+.project
+.classpath
+.vscode
+.idea
+build
+*.iml
+local.properties
+Pods/
+xcuserdata/
+.DS_Store
+R.generated.swift
+Packages/
+local/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="noaddress">No address</string>
+
+    <string name="contract_state_active">Active</string>
+    <string name="contract_state_inactive">Inactive</string>
+    <string name="contract_state_frozen">Frozen</string>
+</resources>

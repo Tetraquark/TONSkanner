@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="explorermain_title">TON-Skanner</string>
+
+    <string name="transaction_history_button">Transaction history</string>
+    <string name="nft_list_button">NFTs</string>
+    <string name="jettons_button">Tokens</string>
+</resources>

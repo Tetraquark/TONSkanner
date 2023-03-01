@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">
+        <light>#2F66F6</light>
+        <dark>#436FE2</dark>
+    </color>
+    <color name="onPrimary">
+        <light>#FFFFFF</light>
+        <dark>#FFFFFF</dark>
+    </color>
+    <color name="primaryLight">
+        <light>#80A1F8</light>
+        <dark>#80A1F8</dark>
+    </color>
+    <color name="primaryDark">
+        <light>#0F4DEE</light>
+        <dark>#0F4DEE</dark>
+    </color>
+    <color name="primaryBackground">
+        <light>#0936AE</light>
+        <dark>#0936AE</dark>
+    </color>
+
+    <color name="background">
+        <light>#F8F9FC</light>
+        <dark>#121212</dark>
+    </color>
+    <color name="surface">
+        <light>#FFFFFF</light>
+        <dark>#22283A</dark>
+    </color>
+    <color name="outline">
+        <light>#D7D9E4</light>
+        <dark>#3D455C</dark>
+    </color>
+    <color name="secondary">
+        <light>#696F8C</light>
+        <dark>#9096A2</dark>
+    </color>
+    <color name="text">
+        <light>#11183C</light>
+        <dark>#FFFFFFE6</dark>
+    </color>
+    <color name="success">
+        <light>#098C26</light>
+        <dark>#31C451</dark>
+    </color>
+    <color name="warning">
+        <light>#F7931A</light>
+        <dark>#F89E32</dark>
+    </color>
+    <color name="error">
+        <light>#CD0000</light>
+        <dark>#FF6666</dark>
+    </color>
+</resources>

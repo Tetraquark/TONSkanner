@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="address_title">Address:</string>
+    <string name="balance_title">Balance:</string>
+    <string name="state_title">State:</string>
+    <string name="contract_type_title">Contract type:</string>
+    <string name="root_jetton_address_title">Root Jetton address:</string>
+    <string name="owner_address_title">Owner address:</string>
+    <string name="admin_address_title">Admin address:</string>
+    <string name="collection_address_title">Collection address:</string>
+    <string name="name_title">Name:</string>
+    <string name="symbol_title">Symbol:</string>
+    <string name="description_title">Description:</string>
+    <string name="ismintable_title">Is mintable:</string>
+    <string name="total_supply_title">Total supply:</string>
+    <string name="marketplace_title">Marketplace:</string>
+    <string name="nftcount_title">Count of NFTs:</string>
+    <string name="nftindex_title">NFT index:</string>
+    <string name="initialized_title">Initialized:</string>
+    <string name="more_details">More details</string>
+    <string name="less_details">Less details</string>
+
+    <string name="contract_type_unknown">Unknown contract</string>
+    <string name="contract_type_wallet">Wallet %s</string>
+    <string name="contract_type_nft_collection">NFT collection</string>
+    <string name="contract_type_nft_item">NFT</string>
+    <string name="contract_type_nft_dns_collection">TON DNS collection</string>
+    <string name="contract_type_nft_dns_item">TON DNS domain</string>
+    <string name="contract_type_jetton">Jetton</string>
+    <string name="contract_type_jetton_wallet">Jetton wallet</string>
+</resources>

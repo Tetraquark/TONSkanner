@@ -1,0 +1,100 @@
+[versions]
+kotlin = "1.8.0"
+android-gradle = "7.2.2"
+
+# kotlinx
+kotlinx-coroutines = "1.6.4"
+kotlinx-serialization = "1.4.1"
+
+# android
+androidx-appcompat = "1.6.1"
+androidx-activity-compose = "1.6.1"
+androidx-compose = "1.4.0"
+androidx-core = "1.9.0"
+androidx-compose-foundation = "1.3.1"
+androidx-compose-material = "1.3.1"
+coil = "2.2.2"
+
+# moko
+moko-resources = "0.20.1"
+
+# compose desktop
+compose-jetbrains = "1.3.0"
+compose-imageloader = "1.2.9"
+
+# multiplatform
+decompose-core = "1.0.0"
+essenty = "1.0.0"
+ktor-client = "2.1.3"
+multiplatformsettings = "1.0.0"
+korlibs = "4.0.0-alpha-2"
+mvikotlin = "3.1.0"
+ton-kotlin = "0.2.15"
+
+# tests
+kotest = "5.5.4"
+
+[libraries]
+# multiplatform
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+
+ton-kotlin = { module = "org.ton:ton-kotlin", version.ref = "ton-kotlin" }
+
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-client" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor-client" }
+ktor-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor-client" }
+# ktorClientIos =  { module = "io.ktor:ktor-client-ios", version.ref = "ktor-client" }
+
+multiplatformsettings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformsettings" }
+
+korlibs-kbignum = { module = "com.soywiz.korlibs.kbignum:kbignum", version.ref = "korlibs" }
+korlibs-klock = { module = "com.soywiz.korlibs.klock:klock", version.ref = "korlibs" }
+
+# decompose
+esenty-parcelable = { module = "com.arkivanov.essenty:parcelable", version.ref = "essenty" }
+decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose-core" }
+decompose-ext-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose-core" }
+decompose-ext-jetpack = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose-core" }
+mvikotlin-core = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlin" }
+mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlin" }
+mvikotlin-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
+
+# moko
+moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources" }
+moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources" }
+
+# tests
+kotest-framework-engine = { module ="io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+
+# jvm
+compose-imageloader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "compose-imageloader" }
+
+# android
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "androidx-compose" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-compose-material" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "androidx-compose-foundation" }
+androidx-compose-uiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
+androidx-compose-uiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose" }
+
+coil-core = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
+
+# gradle plugins artifacts
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle" }
+kotlinx-serialization-gradle = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+compose-jetbrains-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-jetbrains" }
+moko-resources-gradle = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
+kotest-framework-gradle = { module = "io.kotest:kotest-framework-multiplatform-plugin-gradle", version.ref = "kotest" }

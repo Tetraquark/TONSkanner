@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="direction_out">OUT</string>
+    <string name="direction_in">IN</string>
+    <string name="total_fee_title">Total fee:</string>
+    <string name="comment_title">Comment</string>
+    <string name="transactions_not_found">No transactions found</string>
+</resources>

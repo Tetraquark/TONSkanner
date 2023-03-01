@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="app_name">TonSkanner</string>
+    <string name="common_ok">OK</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_failure">Failure!</string>
+    <string name="common_unknown_error">Unknown error</string>
+    <string name="common_reload">Reload</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_validation_failure_empty">Field must not be empty</string>
+    <string name="common_nothing_found">Nothing found</string>
+    <string name="common_change_theme">Change theme</string>
+
+    <string name="error_incorrect_state">Incorrect application state. Please restart.</string>
+    <string name="error_ton_init_connect">Can not establish connection to TON network. Please retry.</string>
+    <string name="error_ton_incorrect_address">Incorrect TON address.</string>
+
+    <string name="validation_incorrect_ton_address">Incorrect TON wallet address</string>
+</resources>
