@@ -1,15 +1,15 @@
 # TonSkanner
 
-*Work in progress*
+**Work in progress**
 
 An experimental pet-project of the simple blockchain (for TON - The Open Network) explorer based on
-*Kotlin Multiplatform*.
+**Kotlin Multiplatform**.
 
 ## Project description
 
 The project implemented an attempt to use the principles of BLoC based on the multiplatform library
 [Decompose](https://github.com/arkivanov/Decompose). As an example and clarity, some components are
-based on the *MVVM* approach, some are based on *MVI*.
+based on the **MVVM** approach, some are based on **MVI**.
 
 ## Application features
 - [x] Basic TON address information
