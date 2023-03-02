@@ -35,6 +35,7 @@ import ru.tetraquark.ton.explorer.app.ui.theme.CustomTheme
 import ru.tetraquark.ton.explorer.app.ui.theme.CustomThemeDrawables
 import ru.tetraquark.ton.explorer.app.ui.utils.Drawable
 import ru.tetraquark.ton.explorer.app.ui.utils.asString
+import ru.tetraquark.ton.explorer.app.ui.utils.toPainter
 import ru.tetraquark.ton.explorer.core.ton.entity.TonConfig
 import ru.tetraquark.ton.explorer.features.base.theme.ThemeMode
 import ru.tetraquark.ton.explorer.features.root.AppConfig
@@ -63,11 +64,14 @@ internal fun startComposeApplication() {
             size = DpSize(1024.dp, 768.dp)
         )
         LifecycleController(appLifecycle, windowState)
+        val windowIconPainter = ImageDesc.Drawable("ic_launcher.xml").toPainter()
 
         Window(
             onCloseRequest = ::exitApplication,
             state = windowState,
-            title = MR.strings.app_name.asString()
+            title = MR.strings.app_name.asString(),
+            icon = windowIconPainter,
+            resizable = false
         ) {
             MenuBar {
                 Menu(text = "View") {
@@ -105,18 +109,18 @@ internal fun startComposeApplication() {
 }
 
 private fun buildCustomThemeDrawables(): CustomThemeDrawables = CustomThemeDrawables(
-    arrowUp = ImageDesc.Drawable("ic_arrow_up"),
-    arrowDown = ImageDesc.Drawable("ic_arrow_down"),
-    arrowLeft = ImageDesc.Drawable("ic_arrow_left"),
-    arrowRight = ImageDesc.Drawable("ic_arrow_right"),
-    keyboardArrowRight = ImageDesc.Drawable("ic_keyboard_arrow_right"),
-    search = ImageDesc.Drawable("ic_search"),
-    copy = ImageDesc.Drawable("ic_copy"),
-    gmailErrorred = ImageDesc.Drawable("ic_report_gmailerrorred"),
-    sentimentVeryDissatisfied = ImageDesc.Drawable("ic_sentiment_very_dissatisfied"),
-    list = ImageDesc.Drawable("ic_list"),
-    image = ImageDesc.Drawable("ic_image"),
-    tokens = ImageDesc.Drawable("ic_tokens")
+    arrowUp = ImageDesc.Drawable("ic_arrow_up.xml"),
+    arrowDown = ImageDesc.Drawable("ic_arrow_down.xml"),
+    arrowLeft = ImageDesc.Drawable("ic_arrow_left.xml"),
+    arrowRight = ImageDesc.Drawable("ic_arrow_right.xml"),
+    keyboardArrowRight = ImageDesc.Drawable("ic_keyboard_arrow_right.xml"),
+    search = ImageDesc.Drawable("ic_search.xml"),
+    copy = ImageDesc.Drawable("ic_copy.xml"),
+    gmailErrorred = ImageDesc.Drawable("ic_report_gmailerrorred.xml"),
+    sentimentVeryDissatisfied = ImageDesc.Drawable("ic_sentiment_very_dissatisfied.xml"),
+    list = ImageDesc.Drawable("ic_list.xml"),
+    image = ImageDesc.Drawable("ic_image.xml"),
+    tokens = ImageDesc.Drawable("ic_tokens.xml")
 ) 
 
 private fun buildImageLoader(

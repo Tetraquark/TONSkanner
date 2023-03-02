@@ -45,7 +45,7 @@ actual fun ImageDesc.toPainter(): Painter {
             } ?: CustomTheme.drawables.gmailErrorred.toPainter()
         }
         is ImageDescDrawable -> {
-            painterResource("drawable/${filePath}.xml")
+            painterResource("drawable/${filePath}")
         }
         else -> {
             error("This kind of ImageDesc is not supported.")
