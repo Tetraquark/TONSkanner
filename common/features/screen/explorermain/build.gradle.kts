@@ -21,15 +21,15 @@ kotlin {
                 implementation(libs.esenty.parcelable)
                 implementation(libs.moko.resources)
 
-                implementation(project(":common:lib:entryfield"))
-                implementation(project(":common:lib:state"))
-                implementation(project(":common:core:ton"))
-                implementation(project(":common:core:storage"))
-                implementation(project(":common:features:base"))
-                implementation(project(":common:features:component:blockchain:addressinfo"))
-                implementation(project(":common:features:component:blockchain:entity"))
-                implementation(project(":common:features:component:inputaddress"))
-                implementation(project(":common:features:component:blockchain:transactions"))
+                implementation(projects.common.lib.entryfield)
+                implementation(projects.common.lib.state)
+                implementation(projects.common.core.ton)
+                implementation(projects.common.core.storage)
+                implementation(projects.common.features.base)
+                implementation(projects.common.features.component.blockchain.addressinfo)
+                implementation(projects.common.features.component.blockchain.entity)
+                implementation(projects.common.features.component.inputaddress)
+                implementation(projects.common.features.component.blockchain.transactions)
             }
         }
         val commonTest by getting {

@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":common:compose-ui"))
+    implementation(projects.common.composeUi)
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity.compose)

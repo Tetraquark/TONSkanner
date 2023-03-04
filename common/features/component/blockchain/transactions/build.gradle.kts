@@ -25,10 +25,10 @@ kotlin {
                 implementation(libs.mvikotlin.main)
                 implementation(libs.mvikotlin.coroutines)
 
-                implementation(project(":common:lib:state"))
-                implementation(project(":common:core:ton"))
-                implementation(project(":common:features:base"))
-                api(project(":common:features:component:blockchain:entity"))
+                implementation(projects.common.lib.state)
+                implementation(projects.common.core.ton)
+                implementation(projects.common.features.base)
+                api(projects.common.features.component.blockchain.entity)
             }
         }
         val commonTest by getting {

@@ -20,7 +20,7 @@ kotlin {
                 // Needed only for preview.
                 implementation(compose.preview)
 
-                api(project(":common:root"))
+                api(projects.common.root)
             }
         }
         val androidMain by getting {

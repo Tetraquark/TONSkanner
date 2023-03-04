@@ -19,8 +19,8 @@ kotlin {
                 implementation(libs.esenty.parcelable)
                 implementation(libs.moko.resources)
 
-                implementation(project(":common:core:storage"))
-                implementation(project(":common:features:base"))
+                implementation(projects.common.core.storage)
+                implementation(projects.common.features.base)
             }
         }
         val commonTest by getting {

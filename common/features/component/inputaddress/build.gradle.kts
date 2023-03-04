@@ -21,10 +21,10 @@ kotlin {
                 implementation(libs.esenty.parcelable)
                 implementation(libs.moko.resources)
 
-                implementation(project(":common:lib:entryfield"))
-                implementation(project(":common:lib:validation"))
-                implementation(project(":common:core:storage"))
-                implementation(project(":common:features:base"))
+                implementation(projects.common.lib.entryfield)
+                implementation(projects.common.lib.validation)
+                implementation(projects.common.core.storage)
+                implementation(projects.common.features.base)
             }
         }
         val commonTest by getting {

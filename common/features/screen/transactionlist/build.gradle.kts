@@ -21,10 +21,10 @@ kotlin {
                 implementation(libs.esenty.parcelable)
                 implementation(libs.moko.resources)
 
-                implementation(project(":common:lib:state"))
-                implementation(project(":common:core:ton"))
-                implementation(project(":common:features:base"))
-                implementation(project(":common:features:component:blockchain:transactions"))
+                implementation(projects.common.lib.state)
+                implementation(projects.common.core.ton)
+                implementation(projects.common.features.base)
+                implementation(projects.common.features.component.blockchain.transactions)
             }
         }
         val commonTest by getting {

@@ -19,7 +19,7 @@ kotlin {
                 implementation(libs.moko.resources)
                 api(libs.korlibs.kbignum)
 
-                implementation(project(":common:core:ton"))
+                implementation(projects.common.core.ton)
             }
         }
         val commonTest by getting

@@ -33,7 +33,7 @@ kotlin {
                 implementation(libs.decompose.ext.jetbrains)
                 implementation(libs.compose.imageloader)
 
-                implementation(project(":common:compose-ui"))
+                implementation(projects.common.composeUi)
             }
         }
         val jvmTest by getting

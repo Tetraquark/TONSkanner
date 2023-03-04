@@ -22,11 +22,11 @@ kotlin {
                 implementation(libs.moko.resources)
                 implementation(libs.korlibs.kbignum)
 
-                api(project(":common:lib:resources"))
-                api(project(":common:lib:state"))
-                implementation(project(":common:core:ton"))
-                api(project(":common:features:base"))
-                api(project(":common:features:component:blockchain:entity"))
+                api(projects.common.lib.resources)
+                api(projects.common.lib.state)
+                implementation(projects.common.core.ton)
+                api(projects.common.features.base)
+                api(projects.common.features.component.blockchain.entity)
             }
         }
         val commonTest by getting {
