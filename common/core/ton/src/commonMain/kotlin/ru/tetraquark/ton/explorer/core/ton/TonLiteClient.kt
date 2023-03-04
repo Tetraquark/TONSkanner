@@ -135,70 +135,66 @@ class TonLiteClient(
         val lc = liteClient ?: error("LiteClient not initialized")
         val account = try {
             runWithAttempts { lc.getAccount(address.userFriendly) }
-                ?: throw TonUnexpectedResponseException()
         } catch (illegalArgEx: IllegalArgumentException) {
             throw TonIncorrectAddressException(illegalArgEx)
         }
 
-        return when (account) {
-            is AccountNone -> null
-            is AccountInfo -> {
-                val state = account.storage.state.mapToContractState()
-                val balance = account.storage.balance.coins.amount.value
-                val walletVersion = (account.storage.state as? AccountActive)
-                    ?.run(::checkWalletVersion)
+        return account?.let {
+            val state = account.storage.state.mapToContractState()
+            val balance = account.storage.balance.coins.amount.value
+            val walletVersion = (account.storage.state as? AccountActive)
+                ?.run(::checkWalletVersion)
 
-                return if (walletVersion != null && walletVersion != WalletVersion.UNKNOWN) {
-                    WalletContract(
-                        address = address,
-                        balance = balance.toBigNum(),
-                        state = state,
-                        walletVersion = walletVersion
-                    )
-                } else {
-                    supervisorScope {
-                        listOf(
-                            async {
-                                runCatching {
-                                    lc.tryNftCollection(
-                                        address,
-                                        state,
-                                        balance
-                                    )
-                                }.onFailure {
-                                    it.printStack()
-                                }.getOrNull()
-                            },
-                            async {
-                                runCatching { lc.tryNftItem(address, state, balance) }.onFailure {
-                                    it.printStack()
-                                }.getOrNull()
-                            },
-                            async {
-                                runCatching {
-                                    lc.tryJettonWallet(
-                                        address,
-                                        state,
-                                        balance
-                                    )
-                                }.onFailure {
-                                    it.printStack()
-                                }.getOrNull()
-                            },
-                            async {
-                                runCatching {
-                                    lc.tryJettonContract(
-                                        address,
-                                        state,
-                                        balance
-                                    )
-                                }.onFailure {
-                                    it.printStack()
-                                }.getOrNull()
-                            }
-                        ).awaitAll().firstOrNull { it != null }
-                    } ?: UnknownContract(address, balance.toBigNum(), state)
-                }
+            return if (walletVersion != null && walletVersion != WalletVersion.UNKNOWN) {
+                WalletContract(
+                    address = address,
+                    balance = balance.toBigNum(),
+                    state = state,
+                    walletVersion = walletVersion
+                )
+            } else {
+                supervisorScope {
+                    listOf(
+                        async {
+                            runCatching {
+                                lc.tryNftCollection(
+                                    address,
+                                    state,
+                                    balance
+                                )
+                            }.onFailure {
+                                it.printStack()
+                            }.getOrNull()
+                        },
+                        async {
+                            runCatching { lc.tryNftItem(address, state, balance) }.onFailure {
+                                it.printStack()
+                            }.getOrNull()
+                        },
+                        async {
+                            runCatching {
+                                lc.tryJettonWallet(
+                                    address,
+                                    state,
+                                    balance
+                                )
+                            }.onFailure {
+                                it.printStack()
+                            }.getOrNull()
+                        },
+                        async {
+                            runCatching {
+                                lc.tryJettonContract(
+                                    address,
+                                    state,
+                                    balance
+                                )
+                            }.onFailure {
+                                it.printStack()
+                            }.getOrNull()
+                        }
+                    ).awaitAll().firstOrNull { it != null }
+                } ?: UnknownContract(address, balance.toBigNum(), state)
             }
         }
     }
@@ -388,7 +384,7 @@ class TonLiteClient(
         val jettonRootContract = tryJettonContract(
             contractAddress = rootAddress as TonAddress.BasicMasterchain,
             contractState = ContractState.ACTIVE,
-            contractBalance = BigInt.ZERO
+            contractBalance = BigInt("0")
         ) as JettonContract
 
         return JettonWalletContract(

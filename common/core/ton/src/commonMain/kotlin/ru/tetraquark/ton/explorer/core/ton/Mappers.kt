@@ -44,7 +44,7 @@ internal fun Transaction.mapTransaction(
     timestampMultiplier: Long = 1000L
 ): ru.tetraquark.ton.explorer.core.ton.entity.Transaction {
     val inMessageInfo = r1.value.inMsg.value?.value?.mapToMessageInfo()
-    val outMessageInfoList = r1.value.outMsgs.nodes()
+    val outMessageInfoList = r1.value.outMsgs
         .map { it.second.value.mapToMessageInfo() }
         .toList()
 
