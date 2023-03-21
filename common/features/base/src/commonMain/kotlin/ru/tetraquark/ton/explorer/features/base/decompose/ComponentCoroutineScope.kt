@@ -5,7 +5,7 @@ import com.arkivanov.essenty.lifecycle.Lifecycle
 import com.arkivanov.essenty.lifecycle.doOnDestroy
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
-import ru.tetraquark.ton.explorer.features.base.coroutines.getUiCoroutineContext
+import ru.tetraquark.ton.explorer.features.base.coroutines.DefaultDispatchers
 import kotlin.coroutines.CoroutineContext
 
 fun CoroutineScope(context: CoroutineContext, lifecycle: Lifecycle): CoroutineScope {
@@ -18,4 +18,4 @@ fun LifecycleOwner.CoroutineScope(context: CoroutineContext): CoroutineScope =
     CoroutineScope(context, lifecycle)
 
 fun LifecycleOwner.CoroutineScope(): CoroutineScope =
-    CoroutineScope(getUiCoroutineContext(), lifecycle)
+    CoroutineScope(DefaultDispatchers.Main, lifecycle)

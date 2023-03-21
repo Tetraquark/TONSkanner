@@ -2,7 +2,6 @@ package ru.tetraquark.ton.explorer.features.component.blockchain.addressinfo.mod
 
 import dev.icerock.moko.resources.desc.image.ImageDesc
 import dev.icerock.moko.resources.desc.image.Url
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import ru.tetraquark.ton.explorer.core.ton.TonLiteClientApi
 import ru.tetraquark.ton.explorer.core.ton.entity.JettonContract
@@ -17,6 +16,7 @@ import ru.tetraquark.ton.explorer.core.ton.entity.WalletContract
 import ru.tetraquark.ton.explorer.core.ton.entity.image.ImageData
 import ru.tetraquark.ton.explorer.core.ton.entity.image.Imageable
 import ru.tetraquark.ton.explorer.core.ton.utils.handleMetadataUri
+import ru.tetraquark.ton.explorer.features.base.coroutines.DefaultDispatchers
 import ru.tetraquark.ton.explorer.features.component.blockchain.addressinfo.model.entity.AddressInfo
 import ru.tetraquark.ton.explorer.features.component.blockchain.entity.CoinAmount
 import ru.tetraquark.ton.explorer.features.component.blockchain.entity.ContractState
@@ -30,9 +30,11 @@ import ru.tetraquark.ton.explorer.core.ton.entity.ContractState as TonContractSt
 class AddressInfoRepository(
     private val tonLiteClientApi: TonLiteClientApi
 ) {
-    suspend fun getAddressInfo(address: String): AddressInfo? = withContext(Dispatchers.IO) {
-        tonLiteClientApi.loadAccountInfo(TonAddress.BasicMasterchain(address))
-            ?.mapToAddressInfo()
+    suspend fun getAddressInfo(address: String): AddressInfo? {
+        return withContext(DefaultDispatchers.IO) {
+            tonLiteClientApi.loadAccountInfo(TonAddress.BasicMasterchain(address))
+                ?.mapToAddressInfo()
+        }
     }
 
     private fun TonContractState.mapState(): ContractState {

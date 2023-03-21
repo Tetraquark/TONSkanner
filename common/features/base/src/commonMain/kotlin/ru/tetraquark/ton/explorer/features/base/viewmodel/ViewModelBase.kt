@@ -2,14 +2,15 @@ package ru.tetraquark.ton.explorer.features.base.viewmodel
 
 import com.arkivanov.essenty.instancekeeper.InstanceKeeper
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
-import ru.tetraquark.ton.explorer.features.base.coroutines.getUiCoroutineContext
-import kotlin.coroutines.CoroutineContext
+import kotlinx.coroutines.CoroutineDispatcher
+import ru.tetraquark.ton.explorer.features.base.coroutines.DefaultDispatchers
 
 abstract class ViewModelBase(
-    coroutineContext: CoroutineContext = getUiCoroutineContext()
+    coroutineDispatcher: CoroutineDispatcher = DefaultDispatchers.Main
 ) : InstanceKeeper.Instance {
-    val instanceScope: CoroutineScope = CoroutineScope(coroutineContext)
+    val instanceScope: CoroutineScope = CoroutineScope(SupervisorJob() + coroutineDispatcher)
 
     override fun onDestroy() {
         instanceScope.cancel()

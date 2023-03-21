@@ -1,12 +1,12 @@
 package ru.tetraquark.ton.explorer.features.component.blockchain.transactions.model
 
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import ru.tetraquark.ton.explorer.core.ton.TonLiteClientApi
 import ru.tetraquark.ton.explorer.core.ton.entity.LtInfo
 import ru.tetraquark.ton.explorer.core.ton.entity.MessageInfo
 import ru.tetraquark.ton.explorer.core.ton.entity.TonAddress
 import ru.tetraquark.ton.explorer.core.ton.entity.Transaction
+import ru.tetraquark.ton.explorer.features.base.coroutines.DefaultDispatchers
 import ru.tetraquark.ton.explorer.features.component.blockchain.entity.Address
 import ru.tetraquark.ton.explorer.features.component.blockchain.entity.CoinAmount
 import ru.tetraquark.ton.explorer.features.component.blockchain.entity.ToncoinAmount
@@ -24,7 +24,7 @@ class TransactionRepository(
         from: Pair<Long, ByteArray>? = null,
     ): List<TransactionListItem> {
         val targetAddress = TonAddress.BasicMasterchain(address)
-        return withContext(Dispatchers.IO) {
+        return withContext(DefaultDispatchers.IO) {
             tonLiteClientApi.loadTransactions(
                 count = size,
                 address = targetAddress,

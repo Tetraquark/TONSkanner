@@ -5,10 +5,10 @@ import com.arkivanov.decompose.childContext
 import com.arkivanov.decompose.value.MutableValue
 import com.arkivanov.decompose.value.Value
 import dev.icerock.moko.resources.desc.StringDesc
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.tetraquark.ton.explorer.core.storage.SettingsStorage
+import ru.tetraquark.ton.explorer.features.base.coroutines.DefaultDispatchers
 import ru.tetraquark.ton.explorer.features.base.resources.ExceptionMapper
 import ru.tetraquark.ton.explorer.features.base.viewmodel.ViewModelBase
 import ru.tetraquark.ton.explorer.features.base.viewmodel.viewModel
@@ -59,7 +59,7 @@ class StartExplorerScreenComponent(
     }
 
     private suspend fun openExplorerMainForAddress(address: String) {
-        withContext(Dispatchers.IO) { initTonLiteClient() }
+        withContext(DefaultDispatchers.IO) { initTonLiteClient() }
         routeNextScreen(address)
     }
 
