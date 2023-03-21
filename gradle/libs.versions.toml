@@ -56,6 +56,8 @@ korlibs-klock = { module = "com.soywiz.korlibs.klock:klock", version.ref = "korl
 
 # decompose
 esenty-parcelable = { module = "com.arkivanov.essenty:parcelable", version.ref = "essenty" }
+esenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essenty" }
+esenty-statekeeper = { module = "com.arkivanov.essenty:state-keeper", version.ref = "essenty" }
 decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose-core" }
 decompose-ext-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose-core" }
 decompose-ext-jetpack = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose-core" }
