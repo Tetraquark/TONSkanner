@@ -1,5 +1,6 @@
 plugins {
     id("kmm-module-convention")
+    kotlin("native.cocoapods")
     id("kotlin-parcelize")
     id("kotlinx-serialization")
     id("dev.icerock.mobile.multiplatform-resources")
@@ -73,6 +74,43 @@ kotlin {
                 //implementation("junit:junit:4.13.2")
                 implementation(libs.kotest.runner.junit5)
             }
+        }
+    }
+
+    cocoapods {
+        version = "0.0.1"
+        summary = "Some description for a Kotlin/Native module"
+        homepage = "Link to a Kotlin/Native module homepage"
+        name = "common"
+
+        framework {
+            // Required properties
+            // Framework name configuration. Use this property instead of deprecated 'frameworkName'
+            baseName = "RootFramework"
+            isStatic = false
+
+            export(libs.esenty.parcelable)
+            export(libs.esenty.lifecycle)
+            export(libs.esenty.statekeeper)
+            export(libs.decompose.core)
+            export(libs.moko.resources)
+            export(libs.multiplatformsettings)
+            export(libs.korlibs.kbignum)
+            export(projects.common.lib.entryfield)
+            export(projects.common.lib.resources)
+            export(projects.common.lib.state)
+            export(projects.common.lib.validation)
+            export(projects.common.core.storage)
+            export(projects.common.core.ton)
+            export(projects.common.features.base)
+            export(projects.common.features.component.blockchain.addressinfo)
+            export(projects.common.features.component.blockchain.entity)
+            export(projects.common.features.component.blockchain.transactions)
+            export(projects.common.features.component.inputaddress)
+            export(projects.common.features.component.queryhistory)
+            export(projects.common.features.screen.explorermain)
+            export(projects.common.features.screen.startexplorer)
+            export(projects.common.features.screen.transactionlist)
         }
     }
 }

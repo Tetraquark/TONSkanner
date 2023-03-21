@@ -93,6 +93,9 @@ class RootComponent(
     private val themeModeState = MutableValue(getThemeModeFromStorage())
     override val themeMode: Value<ThemeMode> get() = themeModeState
 
+    /**
+     * Constructor for iOS.
+     */
     constructor(
         componentContext: ComponentContext,
         settings: Settings,
