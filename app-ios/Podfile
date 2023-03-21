@@ -1,0 +1,19 @@
+source 'https://cdn.cocoapods.org/'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+use_frameworks!
+platform :ios, '12.0'
+
+project 'TONSkanner',
+  'dev-release' => :release, 'dev-debug' => :debug
+
+install! 'cocoapods', :disable_input_output_paths => true
+
+target 'TONSkanner' do
+  pod 'common', :path => '../common/root'
+
+  # pod 'R.swift', '~> 5.3.1'           # Code generation for resources  https://github.com/mac-cain13/R.swift
+  # pod 'AlamofireImage', '~> 3.6.0'    # Image loader with cache https://github.com/Alamofire/AlamofireImage
+end

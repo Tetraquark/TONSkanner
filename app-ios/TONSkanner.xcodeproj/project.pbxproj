@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		222E50E529B7B97C0070173C /* TONSkannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E50E429B7B97C0070173C /* TONSkannerApp.swift */; };
+		222E50E929B7B97E0070173C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222E50E829B7B97E0070173C /* Assets.xcassets */; };
+		222E50EC29B7B97E0070173C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222E50EB29B7B97E0070173C /* Preview Assets.xcassets */; };
+		222E50F629B7B97E0070173C /* TONSkannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E50F529B7B97E0070173C /* TONSkannerTests.swift */; };
+		222E510029B7B97E0070173C /* TONSkannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E50FF29B7B97E0070173C /* TONSkannerUITests.swift */; };
+		222E510229B7B97E0070173C /* TONSkannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E510129B7B97E0070173C /* TONSkannerUITestsLaunchTests.swift */; };
+		222E511729BA09270070173C /* RootComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E511629BA09270070173C /* RootComponentView.swift */; };
+		225C142229BA5ACB003EDAC8 /* StartExplorerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142129BA5ACB003EDAC8 /* StartExplorerScreenView.swift */; };
+		225C142429BA5B1E003EDAC8 /* ExplorerMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142329BA5B1E003EDAC8 /* ExplorerMainScreenView.swift */; };
+		225C142629BA5B2D003EDAC8 /* TransactionListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142529BA5B2D003EDAC8 /* TransactionListScreenView.swift */; };
+		225C142829BA5CE2003EDAC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142729BA5CE2003EDAC8 /* AppDelegate.swift */; };
+		225C142A29BA6BDF003EDAC8 /* RootComponentHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142929BA6BDF003EDAC8 /* RootComponentHolder.swift */; };
+		225C142C29BBB48B003EDAC8 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C142B29BBB48B003EDAC8 /* ObservableValue.swift */; };
+		2293545329CA099000135798 /* TransactionHistoryComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545229CA099000135798 /* TransactionHistoryComponentView.swift */; };
+		2293545529CA0A0900135798 /* AddressInfoComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545429CA0A0900135798 /* AddressInfoComponentView.swift */; };
+		2293545729CA0A5100135798 /* InputAddressComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545629CA0A5100135798 /* InputAddressComponentView.swift */; };
+		2293545929CA0AB700135798 /* QueryHistoryComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545829CA0AB700135798 /* QueryHistoryComponentView.swift */; };
+		2293545B29CA1CAE00135798 /* NativeStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545A29CA1CAE00135798 /* NativeStateable.swift */; };
+		2293545D29CA244600135798 /* ObservableMappedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545C29CA244600135798 /* ObservableMappedValue.swift */; };
+		A64CCF0C4EE603CDFCBF58F0 /* Pods_TONSkanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85D40B156FFD45D9DDF2A0 /* Pods_TONSkanner.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		222E50F229B7B97E0070173C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222E50D929B7B97C0070173C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222E50E029B7B97C0070173C;
+			remoteInfo = TONSkanner;
+		};
+		222E50FC29B7B97E0070173C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222E50D929B7B97C0070173C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222E50E029B7B97C0070173C;
+			remoteInfo = TONSkanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		222E50E129B7B97C0070173C /* TONSkanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TONSkanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		222E50E429B7B97C0070173C /* TONSkannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TONSkannerApp.swift; sourceTree = "<group>"; };
+		222E50E829B7B97E0070173C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		222E50EB29B7B97E0070173C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		222E50F129B7B97E0070173C /* TONSkannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TONSkannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		222E50F529B7B97E0070173C /* TONSkannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TONSkannerTests.swift; sourceTree = "<group>"; };
+		222E50FB29B7B97E0070173C /* TONSkannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TONSkannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		222E50FF29B7B97E0070173C /* TONSkannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TONSkannerUITests.swift; sourceTree = "<group>"; };
+		222E510129B7B97E0070173C /* TONSkannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TONSkannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		222E511629BA09270070173C /* RootComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponentView.swift; sourceTree = "<group>"; };
+		225C142129BA5ACB003EDAC8 /* StartExplorerScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExplorerScreenView.swift; sourceTree = "<group>"; };
+		225C142329BA5B1E003EDAC8 /* ExplorerMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerMainScreenView.swift; sourceTree = "<group>"; };
+		225C142529BA5B2D003EDAC8 /* TransactionListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListScreenView.swift; sourceTree = "<group>"; };
+		225C142729BA5CE2003EDAC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		225C142929BA6BDF003EDAC8 /* RootComponentHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponentHolder.swift; sourceTree = "<group>"; };
+		225C142B29BBB48B003EDAC8 /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		2293545229CA099000135798 /* TransactionHistoryComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryComponentView.swift; sourceTree = "<group>"; };
+		2293545429CA0A0900135798 /* AddressInfoComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoComponentView.swift; sourceTree = "<group>"; };
+		2293545629CA0A5100135798 /* InputAddressComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAddressComponentView.swift; sourceTree = "<group>"; };
+		2293545829CA0AB700135798 /* QueryHistoryComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHistoryComponentView.swift; sourceTree = "<group>"; };
+		2293545A29CA1CAE00135798 /* NativeStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeStateable.swift; sourceTree = "<group>"; };
+		2293545C29CA244600135798 /* ObservableMappedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMappedValue.swift; sourceTree = "<group>"; };
+		3CF11807CC62F63B539CACF1 /* Pods-TONSkanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TONSkanner.release.xcconfig"; path = "Target Support Files/Pods-TONSkanner/Pods-TONSkanner.release.xcconfig"; sourceTree = "<group>"; };
+		54FBE55E33F0A07726D44DEC /* Pods-TONSkanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TONSkanner.debug.xcconfig"; path = "Target Support Files/Pods-TONSkanner/Pods-TONSkanner.debug.xcconfig"; sourceTree = "<group>"; };
+		FE85D40B156FFD45D9DDF2A0 /* Pods_TONSkanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TONSkanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		222E50DE29B7B97C0070173C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64CCF0C4EE603CDFCBF58F0 /* Pods_TONSkanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50EE29B7B97E0070173C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50F829B7B97E0070173C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		222E50D829B7B97C0070173C = {
+			isa = PBXGroup;
+			children = (
+				222E50E329B7B97C0070173C /* TONSkanner */,
+				222E50F429B7B97E0070173C /* TONSkannerTests */,
+				222E50FE29B7B97E0070173C /* TONSkannerUITests */,
+				222E50E229B7B97C0070173C /* Products */,
+				DAB05256CDAA60B909083542 /* Pods */,
+				610A8DE42D5DA2FB121BD747 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		222E50E229B7B97C0070173C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				222E50E129B7B97C0070173C /* TONSkanner.app */,
+				222E50F129B7B97E0070173C /* TONSkannerTests.xctest */,
+				222E50FB29B7B97E0070173C /* TONSkannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		222E50E329B7B97C0070173C /* TONSkanner */ = {
+			isa = PBXGroup;
+			children = (
+				222E511229BA08CF0070173C /* ui */,
+				222E50E429B7B97C0070173C /* TONSkannerApp.swift */,
+				222E50E829B7B97E0070173C /* Assets.xcassets */,
+				222E50EA29B7B97E0070173C /* Preview Content */,
+				222E511629BA09270070173C /* RootComponentView.swift */,
+				225C142729BA5CE2003EDAC8 /* AppDelegate.swift */,
+				225C142929BA6BDF003EDAC8 /* RootComponentHolder.swift */,
+				225C142B29BBB48B003EDAC8 /* ObservableValue.swift */,
+				2293545A29CA1CAE00135798 /* NativeStateable.swift */,
+				2293545C29CA244600135798 /* ObservableMappedValue.swift */,
+			);
+			path = TONSkanner;
+			sourceTree = "<group>";
+		};
+		222E50EA29B7B97E0070173C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				222E50EB29B7B97E0070173C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		222E50F429B7B97E0070173C /* TONSkannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				222E50F529B7B97E0070173C /* TONSkannerTests.swift */,
+			);
+			path = TONSkannerTests;
+			sourceTree = "<group>";
+		};
+		222E50FE29B7B97E0070173C /* TONSkannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				222E50FF29B7B97E0070173C /* TONSkannerUITests.swift */,
+				222E510129B7B97E0070173C /* TONSkannerUITestsLaunchTests.swift */,
+			);
+			path = TONSkannerUITests;
+			sourceTree = "<group>";
+		};
+		222E511029BA08AB0070173C /* features */ = {
+			isa = PBXGroup;
+			children = (
+				222E511429BA08E60070173C /* screen */,
+				222E511329BA08E00070173C /* component */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		222E511129BA08BB0070173C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		222E511229BA08CF0070173C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				222E511129BA08BB0070173C /* view */,
+				222E511029BA08AB0070173C /* features */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		222E511329BA08E00070173C /* component */ = {
+			isa = PBXGroup;
+			children = (
+				2293544F29CA094D00135798 /* blockchain */,
+				2293544E29CA093F00135798 /* queryhistory */,
+				222E511529BA08FB0070173C /* inputaddress */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		222E511429BA08E60070173C /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				225C142129BA5ACB003EDAC8 /* StartExplorerScreenView.swift */,
+				225C142329BA5B1E003EDAC8 /* ExplorerMainScreenView.swift */,
+				225C142529BA5B2D003EDAC8 /* TransactionListScreenView.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		222E511529BA08FB0070173C /* inputaddress */ = {
+			isa = PBXGroup;
+			children = (
+				2293545629CA0A5100135798 /* InputAddressComponentView.swift */,
+			);
+			path = inputaddress;
+			sourceTree = "<group>";
+		};
+		2293544E29CA093F00135798 /* queryhistory */ = {
+			isa = PBXGroup;
+			children = (
+				2293545829CA0AB700135798 /* QueryHistoryComponentView.swift */,
+			);
+			path = queryhistory;
+			sourceTree = "<group>";
+		};
+		2293544F29CA094D00135798 /* blockchain */ = {
+			isa = PBXGroup;
+			children = (
+				2293545129CA096B00135798 /* transactions */,
+				2293545029CA095A00135798 /* addressinfo */,
+			);
+			path = blockchain;
+			sourceTree = "<group>";
+		};
+		2293545029CA095A00135798 /* addressinfo */ = {
+			isa = PBXGroup;
+			children = (
+				2293545429CA0A0900135798 /* AddressInfoComponentView.swift */,
+			);
+			path = addressinfo;
+			sourceTree = "<group>";
+		};
+		2293545129CA096B00135798 /* transactions */ = {
+			isa = PBXGroup;
+			children = (
+				2293545229CA099000135798 /* TransactionHistoryComponentView.swift */,
+			);
+			path = transactions;
+			sourceTree = "<group>";
+		};
+		610A8DE42D5DA2FB121BD747 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE85D40B156FFD45D9DDF2A0 /* Pods_TONSkanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAB05256CDAA60B909083542 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54FBE55E33F0A07726D44DEC /* Pods-TONSkanner.debug.xcconfig */,
+				3CF11807CC62F63B539CACF1 /* Pods-TONSkanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		222E50E029B7B97C0070173C /* TONSkanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222E510529B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkanner" */;
+			buildPhases = (
+				6C31F92848D1AE564BFA24D0 /* [CP] Check Pods Manifest.lock */,
+				222E510E29B863040070173C /* ShellScript */,
+				222E50DD29B7B97C0070173C /* Sources */,
+				222E50DE29B7B97C0070173C /* Frameworks */,
+				222E50DF29B7B97C0070173C /* Resources */,
+				5054AE2F7940498B08F648F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TONSkanner;
+			productName = TONSkanner;
+			productReference = 222E50E129B7B97C0070173C /* TONSkanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		222E50F029B7B97E0070173C /* TONSkannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222E510829B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkannerTests" */;
+			buildPhases = (
+				222E50ED29B7B97E0070173C /* Sources */,
+				222E50EE29B7B97E0070173C /* Frameworks */,
+				222E50EF29B7B97E0070173C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222E50F329B7B97E0070173C /* PBXTargetDependency */,
+			);
+			name = TONSkannerTests;
+			productName = TONSkannerTests;
+			productReference = 222E50F129B7B97E0070173C /* TONSkannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		222E50FA29B7B97E0070173C /* TONSkannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222E510B29B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkannerUITests" */;
+			buildPhases = (
+				222E50F729B7B97E0070173C /* Sources */,
+				222E50F829B7B97E0070173C /* Frameworks */,
+				222E50F929B7B97E0070173C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222E50FD29B7B97E0070173C /* PBXTargetDependency */,
+			);
+			name = TONSkannerUITests;
+			productName = TONSkannerUITests;
+			productReference = 222E50FB29B7B97E0070173C /* TONSkannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		222E50D929B7B97C0070173C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					222E50E029B7B97C0070173C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					222E50F029B7B97E0070173C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 222E50E029B7B97C0070173C;
+					};
+					222E50FA29B7B97E0070173C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 222E50E029B7B97C0070173C;
+					};
+				};
+			};
+			buildConfigurationList = 222E50DC29B7B97C0070173C /* Build configuration list for PBXProject "TONSkanner" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 222E50D829B7B97C0070173C;
+			productRefGroup = 222E50E229B7B97C0070173C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				222E50E029B7B97C0070173C /* TONSkanner */,
+				222E50F029B7B97E0070173C /* TONSkannerTests */,
+				222E50FA29B7B97E0070173C /* TONSkannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		222E50DF29B7B97C0070173C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222E50EC29B7B97E0070173C /* Preview Assets.xcassets in Resources */,
+				222E50E929B7B97E0070173C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50EF29B7B97E0070173C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50F929B7B97E0070173C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222E510E29B863040070173C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :common:root:embedAndSignAppleFrameworkForXcode\n";
+		};
+		5054AE2F7940498B08F648F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TONSkanner/Pods-TONSkanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C31F92848D1AE564BFA24D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TONSkanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		222E50DD29B7B97C0070173C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225C142A29BA6BDF003EDAC8 /* RootComponentHolder.swift in Sources */,
+				2293545D29CA244600135798 /* ObservableMappedValue.swift in Sources */,
+				2293545B29CA1CAE00135798 /* NativeStateable.swift in Sources */,
+				2293545729CA0A5100135798 /* InputAddressComponentView.swift in Sources */,
+				222E50E529B7B97C0070173C /* TONSkannerApp.swift in Sources */,
+				2293545329CA099000135798 /* TransactionHistoryComponentView.swift in Sources */,
+				225C142229BA5ACB003EDAC8 /* StartExplorerScreenView.swift in Sources */,
+				2293545929CA0AB700135798 /* QueryHistoryComponentView.swift in Sources */,
+				2293545529CA0A0900135798 /* AddressInfoComponentView.swift in Sources */,
+				225C142629BA5B2D003EDAC8 /* TransactionListScreenView.swift in Sources */,
+				225C142C29BBB48B003EDAC8 /* ObservableValue.swift in Sources */,
+				225C142829BA5CE2003EDAC8 /* AppDelegate.swift in Sources */,
+				222E511729BA09270070173C /* RootComponentView.swift in Sources */,
+				225C142429BA5B1E003EDAC8 /* ExplorerMainScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50ED29B7B97E0070173C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222E50F629B7B97E0070173C /* TONSkannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222E50F729B7B97E0070173C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222E510029B7B97E0070173C /* TONSkannerUITests.swift in Sources */,
+				222E510229B7B97E0070173C /* TONSkannerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		222E50F329B7B97E0070173C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222E50E029B7B97C0070173C /* TONSkanner */;
+			targetProxy = 222E50F229B7B97E0070173C /* PBXContainerItemProxy */;
+		};
+		222E50FD29B7B97E0070173C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222E50E029B7B97C0070173C /* TONSkanner */;
+			targetProxy = 222E50FC29B7B97E0070173C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		222E510329B7B97E0070173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		222E510429B7B97E0070173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		222E510629B7B97E0070173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FBE55E33F0A07726D44DEC /* Pods-TONSkanner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TONSkanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/../../common/root/build/cocoapods/framework\"",
+					"\"${SRCROOT}/../common/root/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"$(inherited)",
+					"-framework",
+					RootFramework,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		222E510729B7B97E0070173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF11807CC62F63B539CACF1 /* Pods-TONSkanner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TONSkanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/../../common/root/build/cocoapods/framework\"",
+					"\"${SRCROOT}/../common/root/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"$(inherited)",
+					"-framework",
+					RootFramework,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		222E510929B7B97E0070173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TONSkanner.app/TONSkanner";
+			};
+			name = Debug;
+		};
+		222E510A29B7B97E0070173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TONSkanner.app/TONSkanner";
+			};
+			name = Release;
+		};
+		222E510C29B7B97E0070173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TONSkanner;
+			};
+			name = Debug;
+		};
+		222E510D29B7B97E0070173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tetraquark.TONSkannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TONSkanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		222E50DC29B7B97C0070173C /* Build configuration list for PBXProject "TONSkanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222E510329B7B97E0070173C /* Debug */,
+				222E510429B7B97E0070173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222E510529B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222E510629B7B97E0070173C /* Debug */,
+				222E510729B7B97E0070173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222E510829B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222E510929B7B97E0070173C /* Debug */,
+				222E510A29B7B97E0070173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222E510B29B7B97E0070173C /* Build configuration list for PBXNativeTarget "TONSkannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222E510C29B7B97E0070173C /* Debug */,
+				222E510D29B7B97E0070173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 222E50D929B7B97C0070173C /* Project object */;
+}
