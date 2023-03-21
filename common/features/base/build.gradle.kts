@@ -12,6 +12,8 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.decompose.core)
                 implementation(libs.moko.resources)
+
+                implementation(projects.common.lib.entryfield)
             }
         }
         val commonTest by getting {
@@ -21,7 +23,5 @@ kotlin {
                 implementation(libs.kotest.assertions.core)
             }
         }
-        val androidMain by getting
-        val desktopMain by getting
     }
 }
