@@ -19,7 +19,7 @@ internal fun Message<Cell>.parseComment(): String? {
             val commentBits = refs.firstOrNull()?.concatSnake()?.let {
                 firstCellBits + BitString(it)
             } ?: firstCellBits
-            String(commentBits.toByteArray())
+            commentBits.toByteArray().decodeToString()
         } else {
             null
         }

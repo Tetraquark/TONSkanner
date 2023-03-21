@@ -1,5 +1,6 @@
 package ru.tetraquark.ton.explorer.core.ton.utils
 
+import io.ktor.utils.io.core.toByteArray
 import org.ton.crypto.digest.sha256
 import ru.tetraquark.ton.explorer.core.ton.entity.image.ImageData
 import ru.tetraquark.ton.explorer.core.ton.entity.metadata.JettonMetadata
@@ -53,9 +54,9 @@ internal fun mapOnChainJettonMetadata(map: Map<String, Any?>): JettonMetadata {
     )
 }
 
-private fun String.asChunkKey(): String = String(sha256(this.toByteArray()))
+private fun String.asChunkKey(): String = sha256(this.toByteArray()).decodeToString()
 
-private fun Any.castToString(): String = (this as ByteArray).run(::String)
+private fun Any.castToString(): String = (this as ByteArray).decodeToString()
 
 private fun Any.castToInt(): Int {
     var result = 0

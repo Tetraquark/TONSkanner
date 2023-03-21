@@ -79,22 +79,22 @@ internal fun <T> Cell.parseMetadataContent(
             this
         }.beginParse().loadTlb(FullContent.tlbCombinator())
     } catch (e: UnknownTlbConstructorException) {
-        return MetadataContent.OffChain(String(this.concatSnake()))
+        return MetadataContent.OffChain(this.concatSnake().decodeToString())
     }
 
     return when (content) {
         is FullContent.OffChain -> {
             val bytes = content.uri.data.concat()
-            MetadataContent.OffChain(String(bytes))
+            MetadataContent.OffChain(bytes.decodeToString())
         }
         is FullContent.OnChain -> {
             val dataMap = content.data.map { pair ->
-                val key = String(pair.first.toByteArray())
+                val key = pair.first.toByteArray().decodeToString()
                 val data = pair.second
 
                 val dataAny: Any = when (data) {
                     is ContentData.Chunks -> data.data.data.map {
-                        String(it.first.toByteArray()) to it.second.bits.toByteArray()
+                        it.first.toByteArray().decodeToString() to it.second.bits.toByteArray()
                     }
                     is ContentData.Snake -> data.data.concat()
                 }
@@ -102,7 +102,7 @@ internal fun <T> Cell.parseMetadataContent(
             }.toMap()
 
             dataMap["uri"]?.let {
-                MetadataContent.OffChain(String(it as ByteArray))
+                MetadataContent.OffChain((it as ByteArray).decodeToString())
             } ?: MetadataContent.OnChain(
                 metadata = onchainMetadataFactory(dataMap)
             )

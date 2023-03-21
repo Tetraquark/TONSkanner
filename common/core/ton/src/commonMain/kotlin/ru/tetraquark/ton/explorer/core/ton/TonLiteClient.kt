@@ -266,7 +266,7 @@ class TonLiteClient(
                     methodName = "get_domain"
                 ).first() as VmCellSlice
             }
-            val dnsName = String(slice.cell.concatRefs())
+            val dnsName = slice.cell.concatRefs().decodeToString()
 
             NftDnsItemContract(
                 address = contractAddress,
