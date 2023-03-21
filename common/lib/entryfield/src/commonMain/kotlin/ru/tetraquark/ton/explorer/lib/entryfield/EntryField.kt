@@ -2,7 +2,7 @@ package ru.tetraquark.ton.explorer.lib.entryfield
 
 import kotlinx.coroutines.flow.StateFlow
 
-interface EntryField<V, E> {
+interface EntryField<V, E : Any> {
     val valueState: StateFlow<V>
 
     val errorState: StateFlow<E?>

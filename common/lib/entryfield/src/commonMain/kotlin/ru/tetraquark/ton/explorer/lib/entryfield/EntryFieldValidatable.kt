@@ -1,6 +1,6 @@
 package ru.tetraquark.ton.explorer.lib.entryfield
 
-abstract class EntryFieldValidatable<V, E>(
+abstract class EntryFieldValidatable<V, E : Any>(
     val autoValidation: Boolean = false,
     protected val validation: ValidationRule<V, E>? = null,
 ) : EntryField<V, E> {

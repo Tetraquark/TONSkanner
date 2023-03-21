@@ -9,10 +9,10 @@ import dev.icerock.moko.resources.desc.StringDesc
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
 import ru.tetraquark.ton.explorer.core.storage.SettingsStorage
+import ru.tetraquark.ton.explorer.features.base.TextEntryFieldValue
 import ru.tetraquark.ton.explorer.features.base.resources.ErrorDesc
 import ru.tetraquark.ton.explorer.features.base.resources.ExceptionMapper
 import ru.tetraquark.ton.explorer.features.base.viewmodel.ViewModelBase
-import ru.tetraquark.ton.explorer.lib.entryfield.TextEntryField
 import ru.tetraquark.ton.explorer.lib.entryfield.ValidationRule
 
 internal class InputAddressViewModel(
@@ -25,7 +25,8 @@ internal class InputAddressViewModel(
     private val exceptionMapper: ExceptionMapper,
 ) : ViewModelBase() {
 
-    internal val addressTextField = TextEntryField(
+    internal val addressTextField = TextEntryFieldValue(
+        coroutineScope = instanceScope,
         initialValue = (stateKeeper.consume(STATE_KEEPER_KEY) as? AddressState)?.address
             ?: initAddress,
         validation = walletAddressValidationRule

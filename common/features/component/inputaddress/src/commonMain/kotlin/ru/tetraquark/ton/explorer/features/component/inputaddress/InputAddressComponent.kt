@@ -1,22 +1,14 @@
 package ru.tetraquark.ton.explorer.features.component.inputaddress
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.value.MutableValue
 import com.arkivanov.decompose.value.Value
-import com.arkivanov.essenty.parcelable.Parcelable
-import com.arkivanov.essenty.parcelable.Parcelize
-import com.arkivanov.essenty.statekeeper.StateKeeper
-import com.arkivanov.essenty.statekeeper.consume
 import dev.icerock.moko.resources.desc.StringDesc
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.launch
 import ru.tetraquark.ton.explorer.core.storage.SettingsStorage
+import ru.tetraquark.ton.explorer.features.base.TextEntryFieldValue
 import ru.tetraquark.ton.explorer.features.base.resources.ErrorDesc
 import ru.tetraquark.ton.explorer.features.base.resources.ExceptionMapper
-import ru.tetraquark.ton.explorer.features.base.viewmodel.ViewModelBase
 import ru.tetraquark.ton.explorer.features.base.viewmodel.viewModel
-import ru.tetraquark.ton.explorer.lib.entryfield.TextEntryField
 import ru.tetraquark.ton.explorer.lib.entryfield.ValidationRule
 
 class InputAddressComponent(
@@ -40,7 +32,7 @@ class InputAddressComponent(
         )
     }
 
-    override val addressField: TextEntryField<StringDesc>
+    override val addressField: TextEntryFieldValue<StringDesc>
         get() = viewModel.addressTextField
 
     override val isExplorerLoading: Value<Boolean>

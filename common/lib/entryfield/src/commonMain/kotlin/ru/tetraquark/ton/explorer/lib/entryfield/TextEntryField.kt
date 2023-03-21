@@ -3,7 +3,7 @@ package ru.tetraquark.ton.explorer.lib.entryfield
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-open class TextEntryField<E>(
+open class TextEntryField<E : Any>(
     initialValue: String,
     autoValidation: Boolean = false,
     isEnabled: Boolean = true,
