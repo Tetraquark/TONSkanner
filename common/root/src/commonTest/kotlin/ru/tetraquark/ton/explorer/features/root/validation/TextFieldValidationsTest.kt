@@ -1,47 +1,64 @@
 package ru.tetraquark.ton.explorer.features.root.validation
 
-import io.kotest.core.spec.style.FunSpec
-import io.kotest.matchers.nulls.shouldBeNull
-import io.kotest.matchers.nulls.shouldNotBeNull
+import kotlin.test.Test
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 
-class TextFieldValidationsTest : FunSpec({
-    test("validateTONWalletAddressField empty field failure") {
-        validateTONWalletAddressField("").shouldNotBeNull()
+class TextFieldValidationsTest {
+    @Test
+    fun `validateTONWalletAddressField empty field failure`() {
+        assertNotNull(validateTONWalletAddressField(""))
     }
 
-    test("validateTONWalletAddressField min length failure") {
-        validateTONWalletAddressField("123123qweqwe").shouldNotBeNull()
+    @Test
+    fun `validateTONWalletAddressField min length failure`() {
+        assertNotNull(validateTONWalletAddressField("123123qweqwe"))
     }
 
-    test("validateTONWalletAddressField regex failure") {
-        validateTONWalletAddressField("#f-ex!@#%^&%IGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
-            .shouldNotBeNull()
-        validateTONWalletAddressField("Af-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
-            .shouldNotBeNull()
-        validateTONWalletAddressField("E1-exu123uFDFVB0ldQZCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
-            .shouldNotBeNull()
-        validateTONWalletAddressField("Uw-exu123uFDFVB0ldQZCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
-            .shouldNotBeNull()
-        validateTONWalletAddressField("0f-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1we23")
-            .shouldNotBeNull()
+    @Test
+    fun `validateTONWalletAddressField regex failure`(){
+        assertNotNull(
+            validateTONWalletAddressField("#f-ex!@#%^&%IGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
+        )
+        assertNotNull(
+            validateTONWalletAddressField("Af-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
+        )
+        assertNotNull(
+            validateTONWalletAddressField("E1-exu123uFDFVB0ldQZCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
+        )
+        assertNotNull(
+            validateTONWalletAddressField("Uw-exu123uFDFVB0ldQZCJxVV6U-YT5B4nrg2eE8Mj1yOEp0")
+        )
+        assertNotNull(
+            validateTONWalletAddressField("0f-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1we23")
+        )
     }
 
-    test("validateTONWalletAddressField success") {
-        validateTONWalletAddressField("Ef-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
-            .shouldBeNull()
-        validateTONWalletAddressField("EQ-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
-            .shouldBeNull()
-        validateTONWalletAddressField("UQ-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
-        validateTONWalletAddressField("Uf-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
-        validateTONWalletAddressField("kf-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
-        validateTONWalletAddressField("kQ-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
-        validateTONWalletAddressField("0Q-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
-        validateTONWalletAddressField("0f-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
-            .shouldBeNull()
+    @Test
+    fun `validateTONWalletAddressField success`(){
+        assertNull(
+            validateTONWalletAddressField("Ef-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
+        )
+        assertNull(
+            validateTONWalletAddressField("EQ-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
+        )
+        assertNull(
+            validateTONWalletAddressField("UQ-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
+        assertNull(
+            validateTONWalletAddressField("Uf-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
+        assertNull(
+            validateTONWalletAddressField("kf-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
+        assertNull(
+            validateTONWalletAddressField("kQ-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
+        assertNull(
+            validateTONWalletAddressField("0Q-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
+        assertNull(
+            validateTONWalletAddressField("0f-exuKIGuFDFVB0ldQzCJxVV6U-Yn5B4nRg1VE8Mj1yOEp1")
+        )
     }
-})
+}
