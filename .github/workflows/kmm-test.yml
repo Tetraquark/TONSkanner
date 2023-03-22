@@ -1,0 +1,20 @@
+name: Multiplatform tests check
+
+on:
+  push:
+    branches:
+      - ci-dev
+
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 16
+        uses: actions/setup-java@v1
+        with:
+          java-version: 16
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.1.5
+      - name: Run tests
+        run: ./gradlew allTests
