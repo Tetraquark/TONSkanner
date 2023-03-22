@@ -16,7 +16,7 @@ class TextFieldValidationsTest {
     }
 
     @Test
-    fun `validateTONWalletAddressField regex failure`(){
+    fun `validateTONWalletAddressField regex failure`() {
         assertNotNull(
             validateTONWalletAddressField("#f-ex!@#%^&%IGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
         )
@@ -35,7 +35,7 @@ class TextFieldValidationsTest {
     }
 
     @Test
-    fun `validateTONWalletAddressField success`(){
+    fun `validateTONWalletAddressField success`() {
         assertNull(
             validateTONWalletAddressField("Ef-exuKIGuFDFVB0ldQzCJxVV6U-YT5B4nrg1VE8Mj1yOEp0")
         )
