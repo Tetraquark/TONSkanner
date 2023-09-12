@@ -1,11 +1,16 @@
 package ru.tetraquark.ton.explorer.app.ui.theme
 
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import ru.tetraquark.ton.explorer.app.ui.utils.getDarkColor
+import ru.tetraquark.ton.explorer.app.ui.utils.getLightColor
 import ru.tetraquark.ton.explorer.features.root.MR
 
-val LocalCustomThemeColor = staticCompositionLocalOf { LightCustomThemeColors() }
+val LocalCustomThemeColor = staticCompositionLocalOf<CustomThemeColors> {
+    error("CustomTheme colors are not initialized ")
+}
 
 @Immutable
 data class CustomThemeColors(
@@ -26,43 +31,43 @@ data class CustomThemeColors(
 )
 
 @Suppress("FunctionName")
+@Composable
 fun LightCustomThemeColors(): CustomThemeColors {
     return CustomThemeColors(
         isDarkColors = false,
-        background = MR.colors.background.light.toCompose(),
-        surface = MR.colors.surface.light.toCompose(),
-        outline = MR.colors.outline.light.toCompose(),
-        secondary = MR.colors.secondary.light.toCompose(),
-        text = MR.colors.text.light.toCompose(),
-        primary = MR.colors.primary.light.toCompose(),
-        onPrimary = MR.colors.onPrimary.light.toCompose(),
-        primaryLight = MR.colors.primaryLight.light.toCompose(),
-        primaryDark = MR.colors.primaryDark.light.toCompose(),
-        primaryBackground = MR.colors.primaryBackground.light.toCompose(),
-        success = MR.colors.success.light.toCompose(),
-        warning = MR.colors.warning.light.toCompose(),
-        error = MR.colors.error.light.toCompose(),
+        background = MR.colors.background.getLightColor(),
+        surface = MR.colors.surface.getLightColor(),
+        outline = MR.colors.outline.getLightColor(),
+        secondary = MR.colors.secondary.getLightColor(),
+        text = MR.colors.text.getLightColor(),
+        primary = MR.colors.primary.getLightColor(),
+        onPrimary = MR.colors.onPrimary.getLightColor(),
+        primaryLight = MR.colors.primaryLight.getLightColor(),
+        primaryDark = MR.colors.primaryDark.getLightColor(),
+        primaryBackground = MR.colors.primaryBackground.getLightColor(),
+        success = MR.colors.success.getLightColor(),
+        warning = MR.colors.warning.getLightColor(),
+        error = MR.colors.error.getLightColor(),
     )
 }
 
 @Suppress("FunctionName")
+@Composable
 fun DarkCustomThemeColors(): CustomThemeColors {
     return CustomThemeColors(
         isDarkColors = true,
-        background = MR.colors.background.dark.toCompose(),
-        surface = MR.colors.surface.dark.toCompose(),
-        outline = MR.colors.outline.dark.toCompose(),
-        secondary = MR.colors.secondary.dark.toCompose(),
-        text = MR.colors.text.dark.toCompose(),
-        primary = MR.colors.primary.dark.toCompose(),
-        onPrimary = MR.colors.onPrimary.dark.toCompose(),
-        primaryLight = MR.colors.primaryLight.dark.toCompose(),
-        primaryDark = MR.colors.primaryDark.dark.toCompose(),
-        primaryBackground = MR.colors.primaryBackground.dark.toCompose(),
-        success = MR.colors.success.dark.toCompose(),
-        warning = MR.colors.warning.dark.toCompose(),
-        error = MR.colors.error.dark.toCompose(),
+        background = MR.colors.background.getDarkColor(),
+        surface = MR.colors.surface.getDarkColor(),
+        outline = MR.colors.outline.getDarkColor(),
+        secondary = MR.colors.secondary.getDarkColor(),
+        text = MR.colors.text.getDarkColor(),
+        primary = MR.colors.primary.getDarkColor(),
+        onPrimary = MR.colors.onPrimary.getDarkColor(),
+        primaryLight = MR.colors.primaryLight.getDarkColor(),
+        primaryDark = MR.colors.primaryDark.getDarkColor(),
+        primaryBackground = MR.colors.primaryBackground.getDarkColor(),
+        success = MR.colors.success.getDarkColor(),
+        warning = MR.colors.warning.getDarkColor(),
+        error = MR.colors.error.getDarkColor(),
     )
 }
-
-private fun dev.icerock.moko.graphics.Color.toCompose(): Color = Color(red, green, blue, alpha)

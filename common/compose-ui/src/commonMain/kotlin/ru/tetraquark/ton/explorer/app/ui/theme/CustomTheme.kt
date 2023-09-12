@@ -25,7 +25,7 @@ object CustomTheme {
 @Composable
 fun CustomTheme(
     isDarkTheme: Boolean = isSystemInDarkTheme(),
-    drawables: CustomThemeDrawables,
+    drawables: CustomThemeDrawables = defaultCustomThemeDrawables(),
     content: @Composable () -> Unit
 ) {
     val colors = if (isDarkTheme) {
