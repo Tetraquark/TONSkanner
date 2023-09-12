@@ -24,10 +24,10 @@ kotlin {
                 implementation(libs.ktor.logging)
                 implementation(libs.ton.kotlin)
                 implementation(libs.korlibs.kbignum)
+                implementation(libs.moko.resources)
 
                 api(libs.esenty.parcelable)
                 api(libs.decompose.core)
-                api(libs.moko.resources)
                 api(libs.multiplatformsettings)
 
                 api(projects.common.lib.entryfield)
@@ -81,6 +81,8 @@ kotlin {
         version = "0.0.1"
         summary = "Some description for a Kotlin/Native module"
         homepage = "Link to a Kotlin/Native module homepage"
+        ios.deploymentTarget = "14.1"
+        podfile = project.file("../../app-ios/Podfile")
         name = "common"
 
         framework {
