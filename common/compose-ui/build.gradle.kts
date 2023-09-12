@@ -1,40 +1,43 @@
 plugins {
-    id("org.jetbrains.kotlin.multiplatform")
-    id("com.android.library")
-    id("android-module-convention")
+    id("kmm-module-convention")
+    id("dev.icerock.mobile.multiplatform-resources")
     id("org.jetbrains.compose")
 }
 
 group = "ru.tetraquark.ton.explorer.app.ui"
 
 kotlin {
-    android()
-    jvm("desktop")
-
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material)
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(libs.compose.imageloader)
+                implementation(libs.moko.resources)
+                implementation(libs.moko.resources.compose)
                 // Needed only for preview.
-                implementation(compose.preview)
+                //implementation(compose.preview)
 
                 api(projects.common.root)
             }
         }
         val androidMain by getting {
             dependencies {
-                api(libs.androidx.appcompat)
-                api(libs.androidx.core.ktx)
-                api(libs.coil.core)
-                api(libs.coil.compose)
+                implementation(libs.androidx.appcompat)
+                implementation(libs.androidx.core.ktx)
+                implementation(libs.coil.core)
+                implementation(libs.coil.compose)
             }
         }
         val desktopMain by getting {
             dependencies {
-                api(libs.compose.imageloader)
+                //implementation(libs.compose.imageloader)
             }
         }
     }
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = "ru.tetraquark.ton.explorer.app.ui"
 }

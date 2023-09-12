@@ -33,6 +33,7 @@ fun OutlinedTextFieldCustom(
     keyboardActions: KeyboardActions = KeyboardActions.Default,
     singleLine: Boolean = false,
     maxLines: Int = Int.MAX_VALUE,
+    minLines: Int = 1,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     shape: Shape = CustomTheme.shapes.small,
     colors: TextFieldColors = outlinedTextFieldColorsDefault()
@@ -54,6 +55,7 @@ fun OutlinedTextFieldCustom(
         keyboardActions,
         singleLine,
         maxLines,
+        minLines,
         interactionSource,
         shape,
         colors
